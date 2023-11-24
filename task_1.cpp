@@ -42,7 +42,7 @@ private:
 };
 
 int main() {
-    SystemControlReading sys_ctrl_read;
+    SystemControlReading system_control_reading;
     int cmd_count;
     cin >> cmd_count;
    
@@ -56,10 +56,10 @@ int main() {
         if (cmd == "READ") {
             int num_page;
             cin >> num_page;
-            sys_ctrl_read.SaveUserPage(user_id, num_page);
+            system_control_reading.SaveUserPage(user_id, num_page);
         }
         if (cmd == "CHEER") {
-            cout << setprecision(6) << sys_ctrl_read.GetCheerToUser(user_id) << "\n";
+            cout << setprecision(6) << system_control_reading.GetCheerToUser(user_id) << "\n";
         }
     }
     
